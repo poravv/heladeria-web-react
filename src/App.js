@@ -1,11 +1,11 @@
 
 import './App.css';
-import NavigatorBar from './layouts/NavigatorBar';
+import ConfigNav from './layouts/ConfigNav';
 
 function App() {
   return (
     <div className="App">
-      <NavigatorBar/>
+      <ConfigNav/>
     </div>
   );
 }

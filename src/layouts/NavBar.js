@@ -1,31 +1,33 @@
 
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import { Outlet, Link } from 'react-router-dom';
-import '../CSS/NavBar.css';
 
 const NavBarV1 = () => {
 
-    return (
-        <>
-            <header>
-                <Navbar fixed="absolute" className='navBg nav-links' variant='dark' expand="lg">
-                    <Container>
-                        <Navbar.Brand as={Link} to='/'>Inicio</Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav >
-                                <Nav.Link as={Link} to='/productos' >Productos</Nav.Link>
-                                <Nav.Link as={Link} to='/' >Venta</Nav.Link>
-                                <Nav.Link as={Link} to='/buscador' >Buscador</Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
-            </header>
+  return (
+    <>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand as={Link} to='/inicio'>Inicio</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to='/productos' >Productos</Nav.Link>
+              <Nav.Link as={Link} to='/encontranos'>Encontranos</Nav.Link>
+              <Nav.Link as={Link} to='/sobrenosotros'>Sobre nosotros</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link as={Link} to='/contactos'>Contactos</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
-            <Outlet></Outlet>
-        </>
-    );
+      <Outlet />
+    </>
+  );
 }
 
 export default NavBarV1;

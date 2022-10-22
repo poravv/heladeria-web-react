@@ -6,9 +6,9 @@ export const Inicio = () => {
     return (
             <div className='cuerpo'>
                 <Form>
-                <h2>Bienvenido usuario</h2>
+                <h2>Bienvenido a nuestra website</h2>
                 <br/>
-                <p>Te damos algunas recomendaciones</p>
+                <p>Texto x</p>
                 </Form>
             </div>
     );

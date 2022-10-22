@@ -1,8 +1,9 @@
 .cuerpo {
-    min-height: 400px;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: blanchedalmond;
   }
   h2 {
     margin: 20px;
